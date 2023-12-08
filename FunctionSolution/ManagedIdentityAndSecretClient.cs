@@ -6,9 +6,9 @@ using Microsoft.Azure.Functions.Worker.Http;
 
 namespace KeyVaultDemoFunctions
 {
-    public class AzureAppServiceReferences
+    public class ManagedIdentityAndSecretClient
     {
-        [Function("AzureAppServiceReferences")]
+        [Function("ManagedIdentityAndSecretClient")]
         public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Anonymous, "GET")] HttpRequestData req)
         {
             var identityCredential = new DefaultAzureCredential();

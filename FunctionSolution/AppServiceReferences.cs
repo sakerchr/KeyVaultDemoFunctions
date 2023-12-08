@@ -4,9 +4,9 @@ using Microsoft.Azure.Functions.Worker.Http;
 
 namespace KeyVaultDemoFunctions
 {
-    public class AzureIdentityAndSecretClient
+    public class AppServiceReferences
     {
-        [Function("AzureIdentityAndSecretClient")]
+        [Function("AppServiceReferences")]
         public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Anonymous, "GET")] HttpRequestData req)
         {
             var secret = Environment.GetEnvironmentVariable("mySecret");
